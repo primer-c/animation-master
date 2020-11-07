@@ -1,0 +1,50 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.width {
+  width: 300px;
+  height: 300px;
+}
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#app .container {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  position: relative;
+}
+#app .container span {
+  width: 300px;
+  height: 300px;
+  display: block;
+  position: absolute;
+  animation: animate 2s ease-in-out infinite;
+}
+#app .container span:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: linear-gradient(#eee, #000);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 45%;
+}
+@keyframes animate {
+  0% {
+    transform: rotete(0deg);
+  }
+  50%,
+  100% {
+    transform: rotate(360deg);
+  }
+}

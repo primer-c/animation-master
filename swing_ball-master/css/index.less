@@ -1,0 +1,90 @@
+:root {
+  --background-color: #2C3E50;
+  --border-color: #7591AD;
+  --test-color: #344950;
+  --color1: #EC3E27;
+  --color2: #FD79A8;
+  --color3: #0984E3;
+  --color4: #88B894;
+  --color5: #FDCB6E;
+  --color6: #E856FD;
+  --color7: #F97F51;
+  --color8: #BDC581;
+
+}
+.center {
+  display: flex;
+  align-items: center;
+}
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background: var(--background-color);
+  .center;
+  justify-content: center;
+  .contariner {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    .center;
+    justify-content: space-around;
+    .circle {
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: var(--background-color);
+      position: absolute;
+      top: -280px;
+      left: -50px;
+      animation: flow 2s ease-in-out infinite alternate;
+      &:after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: block;
+        background: linear-gradient(#00f, #f00);
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 200px;
+        transform: translate(-50%,0);
+      }
+    }
+    .fence {
+      width: 20px;
+      height: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 1px 10px rgba(0,0,0,.5);
+      background: var(--color1);
+      &:nth-child(2) {
+        background: var(--color2);
+      }
+      &:nth-child(3) {
+        background: var(--color3);
+      }
+      &:nth-child(4) {
+        background: var(--color4);
+      }
+      &:nth-child(5) {
+        background: var(--color5);
+      }
+      &:nth-child(6) {
+        background: var(--color6);
+      }
+      &:nth-child(7) {
+        background: var(--color7);
+      }
+      &:nth-child(8) {
+        background: var(--color8);
+      }
+    }
+  }
+}
+@keyframes flow {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}

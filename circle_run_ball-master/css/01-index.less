@@ -1,0 +1,54 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.width {
+  width: 300px;
+  height: 300px;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  .center;
+
+  .container {
+    .width;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: relative;
+
+    span {
+      .width;
+      display: block;
+      position: absolute;
+      animation: animate 2s ease-in-out infinite;
+
+      &:before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: block;
+        background: linear-gradient(#eee, #000);
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: (50%-5px);
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotete(0deg);
+  }
+
+  50%,
+  100% {
+    transform: rotate(360deg);
+  }
+
+}

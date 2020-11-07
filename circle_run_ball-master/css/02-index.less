@@ -1,0 +1,81 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.width {
+  width: 600px;
+  height: 600px;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  .center;
+
+  .container {
+    .width;
+    border-radius: 50%;
+    // border: 3px solid #000;
+    position: relative;
+
+    span {
+      .width;
+      display: block;
+      position: absolute;
+      animation: animate 2s ease-in-out infinite;
+      animation-delay: calc(0.2s*var(--i));
+
+      &:nth-of-type(1) {
+        --i: 1;
+      }
+
+      &:nth-of-type(2) {
+        --i: 2;
+      }
+
+      &:nth-of-type(3) {
+        --i: 3;
+      }
+
+      &:nth-of-type(4) {
+        --i: 4;
+      }
+
+      &:nth-of-type(5) {
+        --i: 5;
+      }
+
+      &:nth-of-type(6) {
+        --i: 6;
+      }
+
+
+
+      &:before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: block;
+        background: linear-gradient(#fff, #999, #555, #000);
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: (50%-20px);
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50%,
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
