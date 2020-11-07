@@ -1,0 +1,91 @@
+:root {
+  --background-color: #0000ff;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.relative {
+  position: relative;
+}
+body {
+  min-height: 100vh;
+  .center;
+  background: var(--background-color);
+}
+.left {
+  flex: 1;
+  .search {
+    width: 530px;
+    height: 50px;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 6px #fff;
+    .relative;
+    left: -549px;
+    animation: search 1s linear 2s;
+    animation-fill-mode: forwards;
+
+    .key {
+      width: 99px;
+      height: 22px;
+      background: url(../imgs/key.png);
+      .absolute;
+      left: 10px;
+      top: 15px;
+      animation: key 3s linear 2.2s;
+    }
+  }
+  .content {
+    width: 529px;
+    height: 372px;
+    margin-top: 20px;
+    .relative;
+    left: 40px;
+    overflow: hidden;
+    img {
+      .absolute;
+      top: -372px;
+      animation: lowdown 1s linear 6s;
+      animation-fill-mode: forwards;
+    }
+  }
+  
+}
+.right {
+  flex: 1;
+}
+
+/*search 帧动画*/ 
+@keyframes search {
+  from {
+    left: -549px;
+  }
+  to {
+    left: 40px;
+  }
+}
+/*key 帧动画*/ 
+@keyframes key {
+  from{
+    width: 0;
+  }
+  to {
+    width: 99px;
+  }
+}
+
+/*img 帧动画*/ 
+@keyframes lowdown {
+  from{
+    top: -372px;
+  }
+  to {
+    top: 0px;
+  }
+}
