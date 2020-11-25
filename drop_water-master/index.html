@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo of Dropping Water</title>
+  <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="less/index.css">
+  <script src="js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="drop" v-for="item in 3"></div>
+    <div class="collector"></div>
+    <span>80%</span>
+  </div>
+  <script>
+    const app = new Vue({
+      el: "#app",
+      data: {}
+    })
+  </script>
+</body>
+</html>
